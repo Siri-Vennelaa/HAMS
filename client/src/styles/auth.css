@@ -1,0 +1,268 @@
+/* Auth Layout: Two-Column Split */
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+
+/* Left Brand Panel */
+.auth-brand-side {
+  flex: 1.1;
+  background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-brand-side::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.auth-brand-side::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.brand-hero {
+  margin: 40px 0;
+  z-index: 1;
+}
+
+.brand-hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.brand-hero p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  max-width: 460px;
+  line-height: 1.6;
+}
+
+.brand-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.brand-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 10px 16px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+}
+
+.brand-footer {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Right Form Panel */
+.auth-form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 38px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color);
+}
+
+.auth-card.auth-card-wide {
+  max-width: 580px;
+}
+
+.auth-card-header {
+  margin-bottom: 26px;
+  text-align: left;
+}
+
+.auth-card-header h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.auth-card-header p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  padding-right: 44px;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.password-toggle-btn:hover {
+  color: var(--text-main);
+}
+
+.auth-extra-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 0.88rem;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.auth-footer-prompt {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.auth-footer-prompt a {
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* Demo Credentials Hint Box */
+.demo-credentials-box {
+  background-color: var(--primary-light);
+  border: 1px dashed var(--primary-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  font-size: 0.82rem;
+}
+
+.demo-credentials-box h4 {
+  color: var(--primary-color);
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.demo-pill-btn {
+  background: var(--white);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin: 3px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.demo-pill-btn:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-brand-side {
+    padding: 32px 24px;
+    flex: none;
+  }
+
+  .brand-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .brand-features {
+    display: none;
+  }
+
+  .auth-form-side {
+    padding: 24px 16px;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
